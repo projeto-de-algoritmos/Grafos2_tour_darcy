@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 class Grafo:
 
     def __init__(self, quantidadeNos) -> None:
@@ -68,6 +66,6 @@ class Grafo:
             # Se não, descarta a aresta
 
         print("A seguinte é a árvore mínima construída")
-        print("Total: " + total)
+        print(f"Total: {total} ")
         for id1, nome1, id2, nome2, pesoAresta in resultado:
-            print(nome1 + " - " + nome2 + ": " + pesoAresta)
+            print(nome1 + " - " + nome2 + f": {pesoAresta}")
