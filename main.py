@@ -23,8 +23,27 @@ from kruskal import Grafo
 # Uleg-FT, id = 20
 # CCN, id = 21
 # PRC, id = 22
+# ICC, id = 23
+# Memorial Darcy Ribeiro, id = 24
+# Reitoria, id = 25
+# BCE, id = 26
+# Centro Comunitário Athos Bulcão, id = 27
+# CIC/EST, id = 28
+# FD, id = 29
+# FACE, id = 30
+# PAT, id = 31
+# PJC, id = 32
+# IPOL/IREL, id = 33
+# BAES, id = 34
+# BSAN, id = 35
+# ICS, id = 36
+# CEU Bloco K, id = 37
+# FEF, id = 38
+# CO, id = 39
+# CEU Bloco B, id = 40
+# CEU Bloco A, id = 41
 
-g = Grafo(23)
+g = Grafo(73)
 g.addAresta(0, "CAEP", 1, "CET", 0.75)
 g.addAresta(1, "CET", 2, "CDS", 0.13)
 g.addAresta(2, "CDS", 3, "Pavilhão Multiuso II", 0.25)
@@ -56,5 +75,47 @@ g.addAresta(19, "EFL", 20, "Uleg-FT", 0.35)
 g.addAresta(19, "EFL", 21, "CCN", 0.28)
 g.addAresta(21, "CCN", 22, "PRC", 0.2)
 g.addAresta(20, "Uleg-FT", 22, "PRC", 0.24)
+g.addAresta(17, "Restaurante Universitário", 23, "ICC", 0.24)
+g.addAresta(8, "IB", 23, "ICC", 1.7)
+g.addAresta(8, "IB", 24, "Memorial Darcy Ribeiro", 1.7)
+g.addAresta(23, "ICC", 24, "Memorial Darcy Ribeiro", 0.65)
+g.addAresta(23, "ICC", 25, "Reitoria", 0.6)
+g.addAresta(23, "ICC", 26, "BCE", 0.7)
+g.addAresta(24, "Memorial Darcy Ribeiro", 25, "Reitoria", 0.074)
+g.addAresta(25, "Reitoria", 26, "BCE", 0.55)
+g.addAresta(26, "BCE", 27, "Centro Comunitário Athos Bulcão", 0.9)
+g.addAresta(26, "BCE", 28, "CIC/EST", 0.95)
+g.addAresta(28, "CIC/EST", 27, "Centro Comunitário Athos Bulcão", 0.5)
+g.addAresta(28, "CIC/EST", 33, "IPOL/IREL", 0.078)
+g.addAresta(33, "IPOL/IREL", 27, "Centro Comunitário Athos Bulcão", 0.4)
+g.addAresta(28, "CIC/EST", 32, "PJC", 0.26)
+g.addAresta(32, "PJC", 33, "IPOL/IREL", 0.21)
+g.addAresta(33, "IPOL/IREL", 34, "BAES", 0.29)
+g.addAresta(34, "BAES", 32, "PJC", 0.3)
+g.addAresta(32, "PJC", 31, "PAT", 0.089)
+g.addAresta(32, "PJC", 30, "FACE", 0.11)
+g.addAresta(32, "PJC", 35, "BSAN", 0.22)
+g.addAresta(31, "PAT", 30, "FACE", 0.2)
+g.addAresta(30, "FACE", 35, "BSAN", 0.18)
+g.addAresta(29, "FD", 28, "CIC/EST", 0.4)
+g.addAresta(29, "FD", 31, "PAT", 0.27)
+g.addAresta(29, "FD", 30, "FACE", 0.25)
+g.addAresta(29, "FD", 21, "CCN", 0.22)
+g.addAresta(29, "FD", 19, "EFL", 0.35)
+g.addAresta(27, "Centro Comunitário Athos Bulcão", 34, "BAES", 0.3)
+g.addAresta(34, "BAES", 35, "BSAN", 0.26)
+g.addAresta(35, "BSAN", 36, "ICS", 0.35)
+g.addAresta(36, "ICS", 30, "FACE", 0.4)
+g.addAresta(36, "ICS", 29, "FD", 0.3)
+g.addAresta(37, "CEU Bloco K", 21, "CCN", 0.6)
+g.addAresta(37, "CEU Bloco K", 22, "PRC", 0.65)
+g.addAresta(37, "CEU Bloco K", 36, "ICS", 0.35)
+g.addAresta(38, "FEF", 24, "Memorial Darcy Ribeiro", 1.1)
+g.addAresta(38, "FEF", 8, "IB", 2)
+g.addAresta(38, "FEF", 41, "CEU Bloco A", 0.3)
+g.addAresta(41, "CEU Bloco A", 40, "CEU Bloco B", 0.35)
+g.addAresta(41, "CEU Bloco A", 39, "CO", 1.6)
+g.addAresta(40, "CEU Bloco B", 39, "CO", 1.4)
+g.addAresta(38, "FEF", 39, "CO", 1.9)
 
 g.kruskal()
