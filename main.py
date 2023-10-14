@@ -43,7 +43,7 @@ from kruskal import Grafo
 # CEU Bloco B, id = 40
 # CEU Bloco A, id = 41
 
-g = Grafo(73)
+g = Grafo(42)
 g.addAresta(0, "CAEP", 1, "CET", 0.75)
 g.addAresta(1, "CET", 2, "CDS", 0.13)
 g.addAresta(2, "CDS", 3, "Pavilhão Multiuso II", 0.25)
