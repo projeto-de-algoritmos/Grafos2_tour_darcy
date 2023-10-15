@@ -1,1 +1,49 @@
-<p>Total : {{ result }} km </p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UNB Navigator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Rowdies&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: rgb(234, 222, 218);;">
+  <div style="padding: 50px; align-items: center;">
+    <div style="color: #252422; font-family: 'Amaranth', sans-serif; font-size: 20px;">
+      <div style="display: flex;">
+        <div>
+          <h1 style="font-family: 'Rowdies', sans-serif; font-size: 70px; color: rgb(232, 136, 115); margin: 0;">
+            UNB NAVIGATOR
+          </h1>
+          <h2 style="font-family: 'Rowdies', sans-serif; font-size: 25px; color: rgb(232, 136, 115); margin-top: 0;">Descubra o jeito mais rápido de conhecer o campus Darcy Ribeiro</h2>
+          <p>O projeto UNB Campus Navigator tem como objetivo otimizar a exploração do Campus Darcy Ribeiro da Universidade de Brasília (UNB) por meio do uso do algoritmo de Kruskal. O algoritmo de Kruskal será aplicado para encontrar o caminho mais curto que conecta todos os prédios do campus, minimizando a distância total percorrida.</p>
+          <p>Ao utilizar o UNB Campus Navigator, os usuários poderão planejar suas visitas ao campus de forma mais eficiente, economizando tempo e recursos. Este recurso é valioso para estudantes, professores, visitantes e qualquer pessoa que deseje explorar o campus de maneira sistemática e eficaz.</p>
+          <p>O grafo ao lado representa os prédios do campus Darcy Ribeiro.</p>
+        </div>
+        <div>
+          <img src="https://drive.google.com/uc?id=1pt4AKef0qyLIQuz4go_l_yz2d28JarbS" width="800"/>
+        </div>
+      </div>
+      <button style="color: #A37774; font-family: 'Amaranth'; font-size: 20px; padding: 10px; margin: 0 auto; background-color: transparent; border-radius: 7px; border: 3px #A37774 solid; cursor: pointer;" id="mostrarResultado">
+        ENCONTRAR MENOR CAMINHO
+      </button>
+      <p id="total" style="display: none;">Kilometros percorridos: {{ result }} km </p>
+      <img id="grafoResultante" style="display: none;" src="https://drive.google.com/uc?id=1epQXdocexugtcRAmRopWeCidJiZw-4DE" width="1200"/>
+    </div>
+  </div>
+  <script>
+    var botao = document.getElementById("mostrarResultado");
+    var texto = document.getElementById("total");
+    var imagem = document.getElementById("grafoResultante");
+
+    botao.addEventListener("click", function() {
+        if (texto.style.display === "none") {
+            texto.style.display = "block";
+            imagem.style.display = "block";
+        } else {
+            texto.style.display = "none";
+            imagem.style.display = "none";
+        }
+    });
+</script>
+</body>
+</html>
