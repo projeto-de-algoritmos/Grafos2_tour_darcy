@@ -54,6 +54,8 @@ Esse site possui como objetivo retornar o menor caminho possível para se visita
 > CEU Bloco B<br/>
 > CEU Bloco A<br/>
 
+Mais detalhes do funcionamento do projeto e dos algoritmos aplicados foram explicados nesse [vídeo](apresentacao.mp4), que é facilmente encontrado em nosso repositório.
+
 ## Screenshots
 <img src="./assets/unbNavigator.gif"/><br/>
 <img src="./assets/Screenshot 1.png"/><br/>
@@ -64,9 +66,9 @@ Esse site possui como objetivo retornar o menor caminho possível para se visita
 **Framework**: Django<br>
 
 Passos para rodar o projeto:
-1- Instale o Django;
-2- No diretório *tour_darcy*, rode ```python manage.py migrate```;
-3- Ainda no diretório *tour_darcy*, rode ```python manage.py runserver```;
+1- Instale o Django;<br/>
+2- No diretório *tour_darcy*, rode ```python manage.py migrate```;<br/>
+3- Ainda no diretório *tour_darcy*, rode ```python manage.py runserver```;<br/>
 
 ## Uso 
 Para visualizar o resultado do processamento do algoritmo, basta clicar no botão "Encontrar Menor Caminho".
